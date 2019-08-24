@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ClassForm, HooksForm } from './form';
 
 function App() {
+  const submitForm = () => {
+    alert('Congrats, you have been approved');
+  };
+
+  const rejectForm = () => {
+    alert('You have not been approved');
+  };
+
+  const welcome = () => {
+    alert('Welcome');
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ClassForm submitForm={submitForm} rejectForm={rejectForm} welcome={welcome} /> */}
+      <HooksForm submitForm={submitForm} rejectForm={rejectForm} welcome={welcome} />
     </div>
   );
 }
